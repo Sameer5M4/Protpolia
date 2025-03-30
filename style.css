@@ -27,7 +27,7 @@ body{
 
 
 
-@media (max-aspect-ratio: 16/9){
+/* @media (max-aspect-ratio: 16/9){
   .back-vid{
     width: auto;
     height: 100%;
@@ -39,9 +39,11 @@ body{
     width: 100%;
     height: auto;
   }
+} */
+
+.tragger2{
+  display: none;
 }
-
-
 
 .main-section{
   width: 90%;
@@ -237,7 +239,6 @@ a{
   padding: 0 10%;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 
 .info-card{
@@ -264,65 +265,128 @@ a{
   font-size: 20px;
 }
 
-@media (min-width: 1220px) {
-  body{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  .info-sec{
-    margin-top: 30px;
-  }
-}
-
-
-
-@media (max-width: 980px) {
-
-  body{
-    height: fit-content;
-    overflow: auto;
-  }
-
-  .main-section nav ul{
-    display: none;
-  }
-  .Buttons{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .hero{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero-img{
-    width: 400px;
-    height: 400px;
-    margin: 20px 0;
-  }
-
-}
-
-@media (max-width:440px) {
-  .hero-img{
-    width: 350px;
-  }
-
-  .hero h1{
-    font-size: 40px;
-  }
-}
 .desc{
   width:40rem;
   font-weight:500;
 }
 
 .photo {
-  width: 100%; /* Increase the size */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 500px; /* Set a maximum size */
+  width: 100%; 
+  height: auto; 
+  max-width: 500px; 
+}
+/* @media (min-width: 200px) and (max-width: 450px) {
+ .device {
+    font-size: 1.7rem !important;
+  }
+  .h2Device {
+    font-size: 1.5rem !important;
+  }
+  .desc{
+    width:20rem;
+    text-align:justify;
+    font-size:1rem;
+  }
+  .btn{
+    padding:7px 13px;
+  }
+  .Buttons{
+    margin-top:1rem;
+  }
+  .ul-icons{
+    margin-right: 1rem;
+  }
+  .info-sec{
+    margin-top:0rem;
+    width:90%;
+  }
+  .info-sec p {
+    font-size: 15px;
+}
+.info-card h1{
+  font-size: 2rem;
+}
+.hero{
+  height:60%;
+}
+  .tragger1 {
+    display: none;
+  }
+  
+
+} */
+
+@media (min-width: 200px) and (max-width: 450px) {
+  .device {
+    font-size: 1.7rem !important;
+  }
+  .h2Device {
+    font-size: 1.5rem !important;
+  }
+  .desc {
+    width: 20rem;
+    text-align: justify;
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 7px 13px;
+  }
+  .Buttons {
+    margin-top: 1rem;
+  }
+  .ul-icons {
+    margin-right: 1rem;
+  }
+  .info-sec {
+    margin-top: 0rem;
+    width: 90%;
+  }
+  .info-sec p {
+    font-size: 15px;
+  }
+  .info-card h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    height: 60%;
+  }
+  .tragger1 {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 31px;
+    right: 35px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: max-content;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+  }
 }
