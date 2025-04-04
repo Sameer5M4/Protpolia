@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Slider with Swiper</title>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="slider.css"/>
+</head>
+<body>
+    <div class="back" onclick="location.href='index.html'">Back</div>
+    <video autoplay loop muted plays-inline class="back-vid">
+        <source src="galaxy.MP4" type="video/mp4">
+      </video>
+      
+        <!-- Swiper Slider -->
+  <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/1st.jpg" alt="Sample Image 1" />
+            </div>
+            <div class="swiper-slide">
+                <img src="images/QuasarFinalist.jpg" alt="Sample Image 2" />
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Init Swiper -->
+  <script>
+    new Swiper(".swiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+</body>
+</html>
