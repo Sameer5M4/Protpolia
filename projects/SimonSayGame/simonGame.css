@@ -1,0 +1,203 @@
+body{
+    text-align: center;
+    background: linear-gradient(135deg, #f99b45, #d95980, #819ff9, #63aac0, #a8e6cf);
+    background-size: cover;  
+}
+.btn-continer{
+    width: 50%;
+    height:60vh;
+    display:flex;
+    flex-wrap:wrap;
+    margin:auto;
+ }
+ .btn{
+    width:35%;
+    height:25vh;
+    margin:1rem;
+    background-color:yellow;
+    border-radius: 1rem;
+    border:0.5rem solid black;
+ }
+.yellow{
+    background-color:#f99b45;
+}
+.red{
+    background-color: #d95980;
+}
+.purple{
+    background-color:#819ff9;
+}
+.green{
+    background-color: #63aac0;
+}
+.flash{
+    background-color:white;
+}
+.userFlash{
+    /* background-color:green; */
+    opacity: 0.6;
+    
+}
+.circle{
+  width: 100px;
+  height: 97px;
+  border: 1.5rem solid rgb(202, 232, 244);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 42%;
+  left: 40.5%;
+  background-color: white;
+}
+  /* #countdown {
+    font-size: 20px;
+    color: #333;
+    position: absolute;
+    top: 34%;
+    left: 17%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+ 
+  } */
+  #countdown {
+    font-size: 20px;
+    color: #333;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+  
+  .scale {
+    transform: scale(2); /* Apply scaling effect */
+    opacity: 0; /* Gradually fade out */
+  }
+  .updateCountdown{
+    font-size: 48px;
+    color: #333;
+    position: absolute;
+    top: 22%;
+    left: 6%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .circle2{
+    border:1.5rem solid green;
+    transition: 0.25s ease;
+  }
+  .over{
+    border:1.5rem solid red;
+  }
+
+    @media(max-width:480px) {
+      .btn-continer {
+        width: 121%;
+        height: 41vh;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+      }
+      .btn {
+        width: 29%;
+        height: 16vh;
+        margin: 1rem;
+        border-radius: 1rem;
+        border: 0.5rem solid black;
+      }
+      .circle {
+        width: 20%;
+        height: 15%;
+        border: 1rem solid rgb(202, 232, 244);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 45%;
+        left: 34%;
+        background-color: white;
+      }
+      .circle2 {
+        border: 1.5rem solid green; 
+        transition: 0.25s ease;
+      } 
+    }
+    .back {
+      z-index: 9999;
+      color: black;
+      width: 60px;
+      height: 30px;
+      border-radius: 10px;
+      border: 5px solid gray;
+      text-align: center;
+      line-height: 30px;
+      box-shadow: 0 0 3px skyblue;
+      position: absolute;
+      top: 5%;
+      left: 1%;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+    }
+    .back:hover {
+      box-shadow: 0 0 60px skyblue;
+      width:65px;
+      height:35px;
+  
+  }
+  /* .nav {
+    display: flex;
+    width: fit-content; 
+    height: 25px;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    top: 0rem; 
+    gap: 0.5rem; 
+  }
+  
+  .options {
+    width: 7rem;
+    height: 25px;
+    border: 2px solid blue;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue; 
+  } */
+  .nav {
+    display: flex;
+    width: fit-content;       /* Auto-size to fit content */
+    height: auto;             /* Let content define height */
+    align-items: center;
+    position: absolute;
+    top: 1rem;                /* Small space from the top */
+    right: 1rem;              /* Align to the right */
+    gap: 0.75rem;             /* Space between buttons */
+    background: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;             /* Keep it floating above other content */
+  }
+  .options {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    transition: background-color 0.2s ease;
+  }
+  
+  .options:hover {
+    background-color: #e0f2fe;
+  }
+  
+  .options.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+    

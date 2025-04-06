@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SimonGame</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="simonGame.css" />
+</head>
+<body class="text-center bg-gradient-to-br from-orange-300 via-pink-400 to-teal-300 min-h-screen relative">
+
+  <!-- Navigation Bar -->
+  <div class="absolute top-4 right-4 bg-white border border-black px-3 py-2 rounded-md shadow-md flex gap-3 z-50">
+    <a href="../../index.html" class="options px-3 py-1.5 rounded-md text-white bg-blue-500 hover:bg-blue-600">Home</a>
+    <a href="index.html" class="options active px-3 py-1.5 rounded-md text-white bg-blue-500 hover:bg-blue-600">SimonSayGame</a>
+    <a href="../spotify/spotify.html" class="options px-3 py-1.5 rounded-md hover:bg-blue-100 text-black">Spotipy Clone</a>
+    <a href="../Studio/index.html" class="options px-3 py-1.5 rounded-md hover:bg-blue-100 text-black">Photo Studio</a>
+  </div>
+
+  <!-- Game Content -->
+  <h1 class="text-4xl mt-16">Simon say Game</h1>
+  <h2 class="text-lg mb-4">"Press any key or double-tap circle to start"</h2>
+  <!-- Game Buttons -->
+  <div class="btn-continer">
+    <div class="btn yellow" id="yellow"></div>
+    <div class="btn red" id="red"></div>
+    <div class="btn purple" id="purple"></div>
+    <div class="btn green" id="green"></div>
+
+    <!-- Countdown Circle -->
+    <div class="circle">
+      <div id="countdown">Let's Play</div>
+    </div>
+  </div>
+
+  <!-- Sounds -->
+  <audio loop id="backgroundmusic">
+    <source src="music.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+  <audio id="gameover">
+    <source src="GameOver.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Active button switch logic -->
+  <script>
+    const links = document.querySelectorAll(".options");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        links.forEach(l => {
+          l.classList.remove("bg-blue-500", "text-white", "active");
+          l.classList.add("text-black");
+        });
+        link.classList.add("bg-blue-500", "text-white", "active");
+        link.classList.remove("text-black");
+      });
+    });
+  </script>
+
+  <!-- Game JS -->
+  <script src="simonGame.js"></script>
+</body>
+</html>
