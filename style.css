@@ -191,7 +191,7 @@ a {
   box-shadow: 0 0 10px #4acfee;
 }
 
-.hero-img{
+/* .hero-img{
   width: 40%;   
   height: 80%;
   background-color: none;
@@ -206,7 +206,26 @@ a {
   justify-content: center;
   align-items: center;
 
+} */
+.hero-img {
+  width: 450px;                    /* Responsive width */
+  aspect-ratio: 1 / 1;            /* Maintain 1:1 width:height ratio */
+  background-color: transparent;  /* 'none' is invalid, use 'transparent' */
+  position: relative;
+  border-radius: 50%;             /* For circular profile photo */
+  overflow: hidden;
+  box-shadow: 0 0 10px #4eddfd;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.hero-img .i {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 a{
   direction: none;
@@ -305,7 +324,7 @@ a{
 
 } */
 
-@media (min-width: 200px) and (max-width: 450px) {
+/* @media (min-width: 200px) and (max-width: 500px) {
   .device {
     font-size: 1.7rem !important;
   }
@@ -377,5 +396,22 @@ a{
     font-size: 18px;
     font-weight: bold;
     padding: 10px;
+  }
+} */
+.small-screen-warning {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffdddd;
+  color: #900;
+  font-weight: bold;
+}
+@media (max-width: 950px) {
+  .small-screen-warning {
+    display: block;
+  }
+
+  .main-content {
+    display: none;
   }
 }
