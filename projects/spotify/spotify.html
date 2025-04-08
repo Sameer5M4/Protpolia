@@ -10,16 +10,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" href="spotify.css" />
 </head>
 <body>  
-    <!-- <div class="absolute top-4 right-4 z-[9999] bg-white border border-black px-4 py-2 rounded-lg shadow-lg flex gap-4">
-        <a href="../../index.html" class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition">Home</a>
-        <a href="../SimonSayGame/index.html" class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition">SimonSayGame</a>
-        <a href="spotify.html" class="px-4 py-2 rounded-md text-black hover:bg-blue-100 transition">Spotipy Clone</a>
-        <a href="../Studio/index.html" class="px-4 py-2 rounded-md text-black hover:bg-blue-100 transition">Photo Studio</a>
-      </div>                                                                                                         -->
+    <div class="top-navbar">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../SimonSayGame/index.html" class="nav-link">SimonSayGame</a>
+        <a href="spotify.html" class="nav-link">Spotipy Clone</a>
+        <a href="../Studio/index.html" class="nav-link">Photo Studio</a>
+      </div>
+                                                                                                           -->
     <div class="main">
         <div class="sidebar">
             <div class="nav">
@@ -139,7 +139,6 @@
                         <img src="images/card6img.jpeg" class="card-img">
                         <p class="card-title">Top 50 - Global</p>
                         <p class="card-info">Your daily updates of the most played...</p>
-                    </div>
                     <div class="card">
                         <img src="images/card1img.jpeg" class="card-img">
                         <p class="card-title">Top 50 - Global</p>
@@ -180,6 +179,16 @@
             <div class="controls"></div>
         </div>
     </div>
-    
+    <script>
+        const links = document.querySelectorAll('.nav-link');
+        const currentUrl = window.location.href;
+      
+        links.forEach(link => {
+          if (currentUrl.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+          }
+        });
+      </script>
+      
 </body>
 </html>

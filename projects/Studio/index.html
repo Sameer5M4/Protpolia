@@ -18,6 +18,13 @@
     />
   </head>
   <body>
+    <div class="top-navbar">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../SimonSayGame/index.html" class="nav-link">SimonSayGame</a>
+      <a href="../spotify/spotify.html" class="nav-link">Spotipy Clone</a>
+      <a href="index.html" class="nav-link">Photo Studio</a>
+    </div>
+    
     <div class="main_box">
           <input type="checkbox" id="check" />
           <div class="btn_one">
@@ -80,5 +87,16 @@
             </div>
           </div>
         </div>
+        <script>
+          const links = document.querySelectorAll('.nav-link');
+          const currentUrl = window.location.href;
+        
+          links.forEach(link => {
+            if (currentUrl.includes(link.getAttribute('href'))) {
+              link.classList.add('active');
+            }
+          });
+        </script>
+        
   </body>
 </html>

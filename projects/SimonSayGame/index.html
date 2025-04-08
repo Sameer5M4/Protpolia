@@ -5,25 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SimonGame</title>
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Your custom CSS -->
   <link rel="stylesheet" href="simonGame.css" />
 </head>
-<body class="text-center bg-gradient-to-br from-orange-300 via-pink-400 to-teal-300 min-h-screen relative">
-
-  <!-- Navigation Bar -->
-  <div class="absolute top-4 right-4 bg-white border border-black px-3 py-2 rounded-md shadow-md flex gap-3 z-50">
-    <a href="../../index.html" class="options px-3 py-1.5 rounded-md text-white bg-blue-500 hover:bg-blue-600">Home</a>
-    <a href="index.html" class="options active px-3 py-1.5 rounded-md text-white bg-blue-500 hover:bg-blue-600">SimonSayGame</a>
-    <a href="../spotify/spotify.html" class="options px-3 py-1.5 rounded-md hover:bg-blue-100 text-black">Spotipy Clone</a>
-    <a href="../Studio/index.html" class="options px-3 py-1.5 rounded-md hover:bg-blue-100 text-black">Photo Studio</a>
+<body>
+  <div class="top-navbar">
+    <a href="../../index.html" class="nav-link">Home</a>
+    <a href="index.html" class="nav-link">SimonSayGame</a>
+    <a href="../spotify/spotify.html" class="nav-link">Spotipy Clone</a>
+    <a href="../Studio/index.html" class="nav-link">Photo Studio</a>
   </div>
-
+  
   <!-- Game Content -->
-  <h1 class="text-4xl mt-16">Simon say Game</h1>
-  <h2 class="text-lg mb-4">"Press any key or double-tap circle to start"</h2>
+  <h1>Simon say Game</h1>
+  <h2>"Press any key or double-tap circle to start"</h2>
   <!-- Game Buttons -->
   <div class="btn-continer">
     <div class="btn yellow" id="yellow"></div>
@@ -49,19 +43,16 @@
 
   <!-- Active button switch logic -->
   <script>
-    const links = document.querySelectorAll(".options");
-
+    const links = document.querySelectorAll('.nav-link');
+    const currentUrl = window.location.href;
+  
     links.forEach(link => {
-      link.addEventListener("click", () => {
-        links.forEach(l => {
-          l.classList.remove("bg-blue-500", "text-white", "active");
-          l.classList.add("text-black");
-        });
-        link.classList.add("bg-blue-500", "text-white", "active");
-        link.classList.remove("text-black");
-      });
+      if (currentUrl.includes(link.getAttribute('href'))) {
+        link.classList.add('active');
+      }
     });
   </script>
+  
 
   <!-- Game JS -->
   <script src="simonGame.js"></script>
